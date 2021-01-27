@@ -7,25 +7,27 @@
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2? family = 
      Gloria + Hallelujah & display = swap" rel = "hoja de estilo">
+          <script src="https://www.gstatic.com/charts/loader.js"></script>
+  
   </head>
   <body>
     <header>
       <img src="images/logo_rick.jpeg" class="img" alt="logo"/>
       
-      <nav >
-        <a href="#" class="btn">
+      <nav class="item">
+        <a href="#" class="btn" id="buttonPe">
           <span id="span1"></span>
           <span id="span2"></span>
           <span id="span3"></span>
           <span id="span4"></span>   
-             Personajes
+          Personajes
         </a>
         <a href="#" class="btn">
           <span id="span1"></span>
           <span id="span2"></span>
           <span id="span3"></span>
-          <span id="span4"></span>   
-             ¿Sabías qué?
+          <span id="span4"></span>
+          ¿Sabías qué?
         </a>
         <a href="#" class="btn">
           <span id="span1"></span>
@@ -34,38 +36,60 @@
           <span id="span4"></span>   
              Conocenos más
         </a>
-
       </nav>
     </header>
     <main>
       
+      <section class="filter-order">
+      <p class="character">Personajes</p>
+      <ul>
+      <li>Filter by:  ▼
+        <ul>
+          <li id="female">Female</li>
+          <li id="male">Male</li>
+          <!-- <li>Unknown</li>
+          <li id="genderless">Genderless</li> -->
+            <li id="alive">Alive</li>
+            <li id="dead">Dead</li>
+          </ul>
+        </li>
+        </ul>
+        <ul>
+        <li>Sort from:   ▼
+          <ul>
+            <!-- <li>A-Z</li> -->
+            <li id="za">Z-A</li>
+          </ul>
+        </li>
+    </ul>
+    </section>
      <article class = "card">
        <template id= "card-box">
          <div class="container">
-           <div class="card">
+           <div class="card2">
              <h2 class = "card-name"></h2>
-              <img src = "">
+              <img class= "imgTemplate" src = "">
                <h3>Information</h3>
+               <div class="information">
                 <p class = "p1"></p>
                 <p class = "p2"></p>
                 <p class = "p3"></p>
                 <p class = "p4"></p>
-                <p class = "p5"></p>
+                <p class = "p5"></p> 
+              </div>
            </div>
          </div>
        </template>
-     </article>
+      </article>
+      <!-- <section id="grafics"></section> -->
 
       
     
       <!--<div id="root"></div>-->
 
     </main>
-    <footer> Copyright @ Andy && Yessi</footer>
+    <footer class="end"> Copyright &copy; 2021 Andy & Yessi</footer>
 
-
-
-    
     <script src="main.js" type="module"></script>
   </body>
 </html>
