@@ -8,6 +8,7 @@ const characters = data.results;
 
 let buttonPe = document.getElementById("buttonPe");
     buttonPe.addEventListener("click", () => {
+         
     const cards = document.querySelector(".card"),
     template = document.getElementById("card-box").content, 
     fragment =document.createDocumentFragment();
@@ -116,6 +117,7 @@ let buttonPe = document.getElementById("buttonPe");
     // ORDENADO
     let zaButton = document.getElementById("za");
     zaButton.addEventListener("click", () => {
+
     let zaCharacter = orderZA (characters);    
     const template = document.getElementById("card-box").content, 
         cards = document.querySelector(".card"),
@@ -138,16 +140,52 @@ let buttonPe = document.getElementById("buttonPe");
     // console.log(orderZA(characters));
    
     
- 
-// function reglaDeTres (capitulos) {
-//      let resultado = (capitulos*100)/31
-//     console.log(resultado)
-// };
-// reglaDeTres (data.results[0].episode.length);
-// reglaDeTres(data.results[1].episode.length);
-// reglaDeTres(data.results[2].episode.length);
-// reglaDeTres(data.results[46].episode.length);
-// reglaDeTres(data.results[117].episode.length);
-// reglaDeTres(data.results[239].episode.length);
-// reglaDeTres(data.results[241].episode.length);
-// reglaDeTres(data.results[330].episode.length);
+// CALCULO DE LA APARICION DE LOS PERSONAJES POR CAPITULO 
+function reglaDeTres (capitulos) {
+     let resultado = (capitulos*100)/31
+    console.log(resultado)
+};
+reglaDeTres (data.results[0].episode.length);
+reglaDeTres(data.results[1].episode.length);
+reglaDeTres(data.results[2].episode.length);
+reglaDeTres(data.results[46].episode.length);
+reglaDeTres(data.results[117].episode.length);
+reglaDeTres(data.results[239].episode.length);
+reglaDeTres(data.results[241].episode.length);
+reglaDeTres(data.results[330].episode.length);
+
+//Grafica de resultados
+
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Personaje", "Porcentaje", { role: "style" } ],
+    ["Rick Sanchez", 100, "#b87333"],
+    ["Morty Smith", 100, "color: #C70039"],
+    ["Summer Smith", 77.41, "color:#76A7FA"],
+    ["Birdperson", 16.12, "color: #e5e4e2"]
+    //["Evil Morty", 6.45, "color: #e5e4e2"]
+    //["Mr. Goldenflod", 29.03, "color: #b87333"],
+//     ["Mr. Meeseeks", 12.90, "color:BC5679"],
+//     ["Squanchy", 9.67, "color: #e5e4e2"]
+  ]);
+
+ var view = new google.visualization.DataView(data);
+  view.setColumns([0, 1,
+                   { calc: "stringify",
+                     sourceColumn: 1,
+                     type: "string",
+                     role: "annotation" },
+                   2]);
+
+  var options = {
+    title: "Porcentaje de aparición en la serie",
+    width: 600,
+    height: 400,
+    bar: {groupWidth: "95%"},
+    legend: { position: "none" },
+  };
+  var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+  chart.draw(view, options);
+}
