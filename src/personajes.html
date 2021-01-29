@@ -38,28 +38,56 @@
         </a>
       </nav>
     </header>
-     <main>
-       <div class="containerMenu">
-         <ul class="slider">
-           <li id="slide1"><img src="Images/fondo8.jpg"></li>
-           <li id="slide2"><img src="Images/fondo2-recortada.jpg"></li>
-           <li id="slide3"><img src="Images/fondo7.jpg"></li>
-         </ul>
-
-         <ul class="menu">
-           <li>
-             <a href="#slide1">1</a>
-           </li>
-           <li>
-             <a href="#slide2">2</a>
-           </li>
-           <li>
-             <a href="#slide3">3</a>
-           </li>
-         </ul>
-       </div>
+    <main>
       
-     </main>
+      <section class="filter-order">
+      <p class="character">Personajes</p>
+      <ul>
+      <li>Filter by:  ▼
+        <ul>
+          <li id="female">Female</li>
+          <li id="male">Male</li>
+          <!-- <li>Unknown</li>
+          <li id="genderless">Genderless</li> -->
+            <li id="alive">Alive</li>
+            <li id="dead">Dead</li>
+          </ul>
+        </li>
+        </ul>
+        <ul>
+        <li>Sort from:   ▼
+          <ul>
+            <!-- <li>A-Z</li> -->
+            <li id="za">Z-A</li>
+          </ul>
+        </li>
+    </ul>
+    </section>
+     <article class = "card">
+       <template id= "card-box">
+         <div class="container">
+           <div class="card2">
+             <h2 class = "card-name"></h2>
+              <img class= "imgTemplate" src = "">
+               <h3>Information</h3>
+               <div class="information">
+                <p class = "p1"></p>
+                <p class = "p2"></p>
+                <p class = "p3"></p>
+                <p class = "p4"></p>
+                <p class = "p5"></p> 
+              </div>
+           </div>
+         </div>
+       </template>
+      </article>
+      <!-- <section id="grafics"></section> -->
+
+      
+    
+      <!--<div id="root"></div>-->
+
+    </main>
     <footer class="end"> Copyright &copy; 2021 Andy & Yessi</footer>
 
     <script src="main.js" type="module"></script>
