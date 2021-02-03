@@ -1,37 +1,66 @@
-/*@import url ('https://fonts.googleapis.com/css2? 
-family = Gloria + Hallelujah & display = swap'); */
-
 body{
     background-image: url("Images/fondo-rick.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0; 
-}
-
-header{
-    background-color: #000000;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: column;
+    min-height: 100vh;
+} 
+
+/* espacio para logo y botones */
+header{
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    height: 20%;
+    background-color: #000000;
     width: 100%;
-    margin-top: -2%;
-    padding-top: 20px;
 }
 
-.containerMenu{
+/* imagen de header (logo) */
+.img{
+    width: 25%;
+    min-height: 12vw;
+}
+
+/* botones del menu */
+.btn{
+    position:relative;
+    display: inline-block;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 2.1vw;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0s;
+    border-radius: 10px;
+    font-weight: 800;
+    font-family:'Gloria Hallelujah', cursiva;
+    margin-left: 10px;
+}
+
+.btn:hover{ /*estilos de los botones*/
+    background-image: linear-gradient(#50C5B7, #9CEC58, #F0F455);
+    color: black;
+    box-shadow: 0 0 10px #50C5B7 , 0 0 25px #9CEC58;
+}
+
+/* contenido de la pagina */
+main {
+    flex-grow: 1;
+}
+
+/* slider opcional */
+/* .containerMenu{
     width: 100%;
     height: 150px;
-    padding-top: 120px; 
+    padding-top: 160px; 
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    /* padding-bottom: 100px;   */
-    /* display: flex; */
-  /* padding-bottom: 200px; */
+   
 }
 
 ul, li {
@@ -43,7 +72,7 @@ ul, li {
 ul.slider {
     position: relative;
     width: 100%;
-    height: 300px; 
+    height: 200px; 
 }
 
 ul.slider li {
@@ -51,17 +80,13 @@ ul.slider li {
     left: 0;
     top: 0;
     opacity: 0;
-    /* width: 100%;
-    height: 20px; */
-    /* background-color: white; */
     transition: .5s;
 }
 
 ul.slider li img{
     width: 100%;
-    height: 250px;
+    height: 200px;
     padding-bottom: 0;
-    /* object-fit: cover; */
     vertical-align: baseline;
 }
 
@@ -82,10 +107,9 @@ ul.slider li:target {
 .menu li {
     display: inline-flex;
     text-align: center;
-    /* padding-top:10px; */
-    padding-left: 40px;
-    padding-right: 10px;
-}
+    
+    padding-right: 10px; 
+} 
 
 .menu li a {
     display: inline-block;
@@ -93,134 +117,51 @@ ul.slider li:target {
     text-decoration: none;
     background-color: grey;
     padding: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
     border-radius: 100%;
-}
+} */
 
-.img{
-    width: 30%;
-    height: 100%;
-}
-
-.btn{
-    position:relative;
-    display: inline-block;
-    padding: 2rem;
-    color: #ffffff;
-    letter-spacing: 3px;
-    font-size: 30px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0s;
-    border-radius: 10px;
-    margin-left: 2rem;
-    font-weight: 800;
-    font-family:'Gloria Hallelujah', cursiva;
-}
-.btn:hover{
-    background-image: linear-gradient(#50C5B7, #9CEC58, #F0F455);
-    box-shadow: 0 0 10px #50C5B7 , 0 0 25px #9CEC58;
-    transition-delay: 1s;
-}
-
-.btn span{
-    position: absolute;
-    display: block;
-}
-
-#span1{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #C70039);
-}
-.btn:hover #span1{
-    left: 100%;
-    transition: 1.5s;
-}
-
-#span3{
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(270deg, transparent, #C70039);
-}
-.btn:hover #span3{
-    right: 100%;
-    transition-delay: 1s;
-}
-
-#span2{
-    top: -100%;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #C70039);
-}
-.btn:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 1.5s;
-}
-
-#span4{
-    bottom: -100%;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent, #C70039);
-}
-.btn:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
-
- main {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
+ /* texto de la lista de filtrado (personajes) */
 .character {
-    font-size:30px;
+    font-size:2.1vw;
     font-weight: 900;
 }
 
-.filter-order {
-    height: 5%;
+/* div del menu */
+.filter-order {    
     width: 100%;
     background-color: rgba(243, 90, 76, 0.6);
-    margin-top: 123px;
+    margin-top: 12vw;
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
+/* retira el estilo de listas por defecto */
 ul {
     list-style: none;
 }
 
+/* estilo de los botones de filtrado y ordenado */
 .filter-order li {
     background-color:rgba(243, 90, 76, 0.9);
     color: black;
     border-radius: 5px;
     padding: 10px 15px;
-    width: 150px;
+    width: 20vw;
     text-align: center;
-    font-size: 23px;
+    font-size: 1.9vw;
+    font-weight: 300;
 }
 
 .filter-order li:hover {
 background-color: #ffffff;
 }
 
+/* desplaza los submenus */
 .filter-order li ul {
     display:none;
     position: absolute;
@@ -231,30 +172,7 @@ background-color: #ffffff;
     display: block;
 }
 
- .container{
-    width: 330px;
-    height: 600px;
-    background-color: rgba(77, 213, 246, 0.3);
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    /* overflow: hidden; */
-    margin: 10px;
-    text-align: center;
-    transition: all 0.25s; 
-}
-
-
-.imgTemplate{
-    width: 260px;
-    height: 270px;
-    border-radius: 3px;
-}
-
-.conteiner.card:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); 
-}
-
+/* propiedades flex del contenedor de las tarjetas */
 .card{
     display: flex;
     flex-flow: wrap;
@@ -263,6 +181,31 @@ background-color: #ffffff;
     padding-top: 20px;
 }
 
+/* estilos del contenedor de las tarjetas */
+ .container{
+    width: 22vw;
+    height: 41vw;
+    background-color: rgba(77, 213, 246, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: center;
+    transition: all 0.25s; 
+}
+
+.card .container:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* tamaño de imagen de la tarjeta */
+.imgCard{
+    width: 19vw;
+    height: 20vw;
+    border-radius: 3px;
+}
+
+/* estilos de la seccion del nombre de los personajes */
 h2 {
     background-color: rgba(235, 223, 65, 0.7);
     margin: 5%;
@@ -271,42 +214,43 @@ h2 {
     text-align: center;
     align-items: center;
     justify-content: space-around;
-    height: 60.56px;
+    height: 4.1vw;
+    font-size: 2vw;
 }
 
-.card-name {
-    text-align: center;
-    padding-top: 5px;
-}
-
+/* estilos de la seccion de informacion de los personajes */
 h3 {
     background-color: rgba(235, 223, 65, 0.7);
     margin-right: 5%; 
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 3%;
-    border-radius: 2px;    
+    border-radius: 2px;
+    height: 1.5vw; 
+    font-size: 1.3vw;  
 }
 
+/* estilos del contenido de la seccion de informacion de los personajes */
 .information {
     background-color: rgba(199, 198, 188, 0.8);
     border-radius: 5px;
     margin-top: 2px;
     margin-right: 5%; 
     margin-left: 5%;
-    width: 297.01px;
-    height: 170.18px ;
+    width: 19.7vw;
+    height: 10vw ;
     text-align: center;
      padding: 1px;
      padding-bottom: 1px;
      line-height: 70%;
-     font-size: 16px;
+     font-size: 1vw;
 }
 
+/* estilos del footer */
 .end {
     background-color: #000000;
     display: flex;
-    flex-flow: wrap;
+    flex-flow:row wrap;
     justify-content: space-evenly;
     align-items: center; 
     height: 5%;
@@ -316,6 +260,30 @@ h3 {
     padding-block-end: 10px;
     color: #ffffff;
     font-size: 20px;
-    position: fixed;
-    bottom: 0;
 }
+
+@media screen and (max-width:320px) and (max-height:480px) and (orientation:portrait) {
+    body{
+        flex-direction: column;
+    }
+    header{
+
+     flex-direction: column;
+ }
+
+     /* .btn {
+         display: flex;
+         flex-direction: row;
+         width: 20px;
+         height: 10px;
+
+     }
+  
+@media screen and (max-width:768px) and (max-height:1024px) and (orientation:portrait) {
+ 
+    
+   
+}
+/* 
+@media screen and (max-width:800px) { 
+}*/

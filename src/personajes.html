@@ -2,44 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
     <link href = "https://fonts.googleapis.com/css2? family = 
      Gloria + Hallelujah & display = swap" rel = "hoja de estilo">
-          <script src="https://www.gstatic.com/charts/loader.js"></script>
-  
+    
   </head>
   <body>
+    <div class="contenedorWeb">
     <header>
       <img src="images/logo_rick.jpeg" class="img" alt="logo"/>
       
       <nav class="item">
-        <a href="#" class="btn" id="buttonPe">
-          <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-          <span id="span4"></span>   
+        <a href="./index.html" class="btn"> 
+          Inicio
+        </a>
+        <a href="./personajes.html" class="btn" id="buttonPe">
           Personajes
         </a>
-        <a href="#" class="btn">
-          <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-          <span id="span4"></span>
+        <a href="./calculo.html" class="btn">
           ¿Sabías qué?
         </a>
-        <a href="#" class="btn">
-          <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-          <span id="span4"></span>   
+        <a href="#" class="btn">  
              Conocenos más
         </a>
       </nav>
     </header>
     <main>
-      
       <section class="filter-order">
       <p class="character">Personajes</p>
       <ul>
@@ -47,49 +38,25 @@
         <ul>
           <li id="female">Female</li>
           <li id="male">Male</li>
-          <!-- <li>Unknown</li>
-          <li id="genderless">Genderless</li> -->
-            <li id="alive">Alive</li>
-            <li id="dead">Dead</li>
+          <li id="alive">Alive</li>
+          <li id="dead">Dead</li>
           </ul>
         </li>
         </ul>
         <ul>
         <li>Sort from:   ▼
           <ul>
-            <!-- <li>A-Z</li> -->
-            <li id="za">Z-A</li>
+          <li id="za">Z-A</li>
           </ul>
         </li>
     </ul>
     </section>
-     <article class = "card">
-       <template id= "card-box">
-         <div class="container">
-           <div class="card2">
-             <h2 class = "card-name"></h2>
-              <img class= "imgTemplate" src = "">
-               <h3>Information</h3>
-               <div class="information">
-                <p class = "p1"></p>
-                <p class = "p2"></p>
-                <p class = "p3"></p>
-                <p class = "p4"></p>
-                <p class = "p5"></p> 
-              </div>
-           </div>
-         </div>
-       </template>
-      </article>
-      <!-- <section id="grafics"></section> -->
-
+     <div class="card" id="cardsContainer">
+     </div>
       
-    
-      <!--<div id="root"></div>-->
-
     </main>
     <footer class="end"> Copyright &copy; 2021 Andy & Yessi</footer>
-
+  </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
