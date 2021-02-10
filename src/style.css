@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+@font-face {
+    font-family: caricaturista;
+    src: url(https://www.dafont.com/es/caricaturista.font);      
+}
+
 body{
     background-image: url("Images/fondo-rick.jpeg");
     background-attachment: fixed;
@@ -13,6 +20,7 @@ body{
 header{
     display: flex;
     justify-content: space-evenly;
+    flex-flow: row wrap;
     align-items: center;
     position: fixed;
     background-color: #000000;
@@ -22,7 +30,7 @@ header{
 /* imagen de header (logo) */
 .img{
     width: 25%;
-    min-height: 12vw;
+    height: 8vw;
 }
 
 /* botones del menu */
@@ -31,13 +39,13 @@ header{
     display: inline-block;
     padding: 1rem;
     color: #ffffff;
-    font-size: 2.1vw;
+    font-size: 2vw;
     text-decoration: none;
     overflow: hidden;
     transition: 0s;
     border-radius: 10px;
-    font-weight: 800;
-    font-family:'Gloria Hallelujah', cursiva;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
     margin-left: 10px;
 }
 
@@ -122,20 +130,21 @@ ul.slider li:target {
     font-size: 20px;
     border-radius: 100%;
 } */
-
  /* texto de la lista de filtrado (personajes) */
 .character {
     font-size:2.1vw;
     font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* div del menu */
 .filter-order {    
     width: 100%;
+    height: 5vw;
     background-color: rgba(243, 90, 76, 0.6);
-    margin-top: 12vw;
+    margin-top: 8vw;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -150,11 +159,12 @@ ul {
     background-color:rgba(243, 90, 76, 0.9);
     color: black;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 0.5vw;
     width: 20vw;
     text-align: center;
-    font-size: 1.9vw;
+    font-size: 1.8vw;
     font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .filter-order li:hover {
@@ -184,7 +194,7 @@ background-color: #ffffff;
 /* estilos del contenedor de las tarjetas */
  .container{
     width: 22vw;
-    height: 41vw;
+    height: 37ivevw;
     background-color: rgba(77, 213, 246, 0.3);
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -200,8 +210,8 @@ background-color: #ffffff;
 
 /* tamaño de imagen de la tarjeta */
 .imgCard{
-    width: 19vw;
-    height: 20vw;
+    width: 18vw;
+    height: 16vw;
     border-radius: 3px;
 }
 
@@ -215,7 +225,8 @@ h2 {
     align-items: center;
     justify-content: space-around;
     height: 4.1vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-family: 'Coming Soon', cursive;
 }
 
 /* estilos de la seccion de informacion de los personajes */
@@ -227,7 +238,9 @@ h3 {
     margin-bottom: 3%;
     border-radius: 2px;
     height: 1.5vw; 
-    font-size: 1.3vw;  
+    font-size: 1.3vw; 
+    font-family: 'Coming Soon', cursive; 
+
 }
 
 /* estilos del contenido de la seccion de informacion de los personajes */
@@ -240,10 +253,11 @@ h3 {
     width: 19.7vw;
     height: 10vw ;
     text-align: center;
-     padding: 1px;
-     padding-bottom: 1px;
-     line-height: 70%;
-     font-size: 1vw;
+    padding: 1px;
+    padding-bottom: 1px;
+    line-height: 70%;
+    font-size: 1vw;
+    font-family: 'Coming Soon', cursive;
 }
 
 /* estilos del footer */
@@ -259,17 +273,17 @@ h3 {
     padding-top:5px;
     padding-block-end: 10px;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 2vw;
 }
 
-@media screen and (max-width:320px) and (max-height:480px) and (orientation:portrait) {
+/* @media screen and (max-width:320px) and (max-height:480px) and (orientation:portrait) {
     body{
         flex-direction: column;
     }
     header{
 
      flex-direction: column;
- }
+ } */
 
      /* .btn {
          display: flex;
@@ -283,7 +297,4 @@ h3 {
  
     
    
-}
-/* 
-@media screen and (max-width:800px) { 
 }*/
